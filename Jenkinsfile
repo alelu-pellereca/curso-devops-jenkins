@@ -1,6 +1,10 @@
 pipeline {
     agent any
  
+    enviroment{
+        FLY_API_TOKEN-credentials 'FLY_API_TOKEN_TEST'
+    }
+
     tools {
         nodejs "nodejs-18"
     }
@@ -16,9 +20,9 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Run test'){
+        stage('pintar credenciales'){
             steps{
-                echo 'Running test'
+                echo 'hola'
                 sh 'npm run test'
             }
         }
