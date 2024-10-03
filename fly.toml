@@ -1,15 +1,12 @@
-# fly.toml app configuration file generated for curso-devops-jenkins-blue-frog-1960 on 2024-10-02T20:43:34+02:00
+# fly.toml app configuration file generated for curso-devops-jenkins-black-feather-6100 on 2024-10-03T16:39:29+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'curso-devops-jenkins-blue-frog-1960'
+app = 'curso-devops-jenkins-black-feather-6100'
 primary_region = 'mad'
 
 [build]
-
-[env]
-  PORT = '8080'
 
 [http_service]
   internal_port = 8080
