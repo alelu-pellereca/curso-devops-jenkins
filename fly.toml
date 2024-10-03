@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for curso-devops-jenkins-black-feather-6100 on 2024-10-03T16:39:29+02:00
+# fly.toml app configuration file generated for curso-devops-jenkins-rough-log-9484 on 2024-10-03T16:57:57+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'curso-devops-jenkins-black-feather-6100'
+app = 'curso-devops-jenkins-rough-log-9484'
 primary_region = 'mad'
 
 [build]
