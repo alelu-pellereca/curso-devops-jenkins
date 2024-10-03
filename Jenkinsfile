@@ -2,7 +2,7 @@ pipeline {
     agent any
  
     environment {
-        FLY_API_TOKEN=credentials('FLY_API_TOKEN_TEST')
+        FLY_API_TOKEN=credentials('JENKINS_ALEJANDRA')
     }
  
     tools {
@@ -18,14 +18,14 @@ pipeline {
         stage('Install Fly.io') {
             steps {
                 echo 'Installing Fly.io...'
-                withCredentials([string(credentialsId: 'FLY_API_TOKEN_TEST', variable: 'FLY_API_TOKEN_TEST')]) {
+                withCredentials([string(credentialsId: 'JENKINS_ALEJANDRA', variable: 'JENKINS_ALEJANDRA')]) {
                     sh '''
                         # Instalar flyctl si no está ya disponible
                         curl -L https://fly.io/install.sh | sh
                         export FLYCTL_INSTALL="/var/jenkins_home/.fly"
                         export PATH="$FLYCTL_INSTALL/bin:$PATH"
                         # Autenticarse con Fly.io
-                        fly auth token $FLY_API_TOKEN_TEST
+                        fly auth token $JENKINS_ALEJANDRA
                     '''
                 }
             }
@@ -45,14 +45,14 @@ pipeline {
         }
         stage('Pintar credencial'){
             steps{
-                echo 'Hola esta es mi credencial: $FLY_API_TOKEN_TEST'
+                echo 'Hola esta es mi credencial: $JENKINS_ALEJANDRA'
             }
         }
  
         stage('Deploy to Fly.io') {
             steps {
                 echo 'Deploying the project to Fly.io...'
-                sh '/var/jenkins_home/.fly/bin/flyctl deploy --app curso-devops-jenkins --remote-only'
+                sh '/var/jenkins_home/.fly/bin/flyctl deploy --app curso-devops-jenkins-rough-log-9484 --remote-only'
             }
         }
     }
