@@ -13,6 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl deploy --remote-only
+      - run: flyctl deploy --app curso-devops-jenkins-rough-log-9484 --remote-only
         env:
           FLY_API_TOKEN: ${{ secrets.JENKINS_ALEJANDRA}}
