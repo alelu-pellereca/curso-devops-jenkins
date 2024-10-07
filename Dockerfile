@@ -1,18 +1,21 @@
-#Seleccionar la base del contenedor
-#FROM ubuntu:10.04
+# Selecciona la base de mi contenedor
+# FROM ubuntu:10.04
+# PESO DE 2GB
 #FROM node:22.9.0
+# PESO de 250MB
 FROM node:22.9.0-alpine
+ 
 #Ejecutar comandos de la terminal
-RUN apt-get install <package-name>
-#Copiar archivos desde el local hasta el Dockerfile
+#RUN apt-get install <package-name>
+ 
 COPY package.json /opt/
-#Seleccionar donde se van a ejecutar todos los comandos
-WORKDIR /opt/
-#instalar package json
+ 
 RUN npm install
-
-COPY . . 
-#para que alguien que haga una peticion al puerto 3000, que acceda a l APP
+ 
+WORKDIR /opt/
+ 
+COPY . .
+ 
 EXPOSE 3000
-
-CMD ["npm","run","start"]
+ 
+CMD ["npm", "run", "start"]
