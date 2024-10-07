@@ -7,15 +7,10 @@ FROM node:22.9.0-alpine
  
 #Ejecutar comandos de la terminal
 #RUN apt-get install <package-name>
- 
-COPY package.json /opt/
- 
+WORKDIR /opt/ 
+COPY ./ ./
 RUN npm install
- 
-WORKDIR /opt/
- 
-COPY . .
  
 EXPOSE 3000
  
-CMD ["npm", "run", "start"]
+CMD ["npm", "start"]
