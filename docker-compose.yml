@@ -10,4 +10,8 @@ services:
   mailService: 
     build: .
     ports:
-      - "8080:80"
+      - "8080:8080"
+  Database: 
+    image: deis
+    ports:
+      - "80:80"
