@@ -5,8 +5,6 @@ services:
     image: alepellereca/my-api:1.0.1
     ports:
       - "3000:3000"
-    volumes:
-      - .:/opt
   http-server: 
     image: nginx
     ports:
