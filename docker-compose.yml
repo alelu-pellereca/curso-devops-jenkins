@@ -2,14 +2,14 @@ version: '3'
 services: 
   userService: 
     #build: .
-    image: alepellereca/my-api:1.0.1
+    image: github.com/docker/compose.git
     ports:
       - "3000:3000"
     #volumes:
       #- .:/opt
   mailService: 
     #build: .
-    image: alepellereca/my-api:1.0.1
+    image: github.com/docker/compose.git
     ports:
       - "8080:8080"
   Database: 
