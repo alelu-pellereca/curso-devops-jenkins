@@ -1,11 +1,13 @@
-version: '3'
+#version: '3'
 services: 
-  api: 
-    #build: .
-    image: alepellereca/my-api:1.0.1
+  userService: 
+    build: .
+    #image: alepellereca/my-api:1.0.1
     ports:
       - "3000:3000"
-  http-server: 
+    #volumes:
+      #- .:/opt
+  mailService: 
     image: nginx
     ports:
       - "8080:80"
