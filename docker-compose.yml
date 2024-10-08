@@ -7,6 +7,6 @@ services:
     volumes:
       - .:/opt
   http-server: 
-    image: nginx:lastest
+    image: nginx
     ports:
       -"8080:80"
