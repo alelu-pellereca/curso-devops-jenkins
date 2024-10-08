@@ -13,9 +13,11 @@ services:
     ports:
       - "8080:3000"
   Database: 
-    image: redis
+    build: .
     ports:
       - "5000:5000"
     volumes:
       - .:/code
+  redis:
+    image: redis
  
