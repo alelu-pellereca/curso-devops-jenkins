@@ -5,7 +5,7 @@ app.use(express.json());
 
 // Ruta básica
 app.get('/', (req, res) => {
-    res.status(200).json({ message: 'Hello World probando 8081!' });
+    res.status(200).json({ message: 'Hello World probando 8080!' });
 });
 
 // Ruta de ejemplo para pruebas
