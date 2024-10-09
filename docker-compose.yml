@@ -11,7 +11,20 @@ services:
     build: ./mailService
     #image: alepellereca/my-api:1.0.1
     ports:
-      - "8080:3000"
+      - "3001:3000"
   redis:
     image: redis
+    restart: always
+  database-mongo:
+    image: mongo
+    restart: always
+    ports: 
+     - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+  database-mysql: 
+    image: mysql
+    ports: 
+      - "3306:3306"
  
