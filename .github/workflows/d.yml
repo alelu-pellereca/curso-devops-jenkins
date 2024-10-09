@@ -24,7 +24,6 @@ jobs:
 
     - name: 'Build & Test'
       run: 
-        npm install nodemon
         
         # Build the project, with its main file included, without unittestsdub build --compiler=$DC
         # Build and run tests, as defined by `unittest` configuration

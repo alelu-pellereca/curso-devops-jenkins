@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "watch:css":"onchange 'assets/scss/*.scss' -- npm run build:css",
+    "watch:js":"onchange 'assets/js/*.js' -- npm run build:js",
     "start:nodemon": "nodemon src/index.js",
     "start": "node src/index.js",
     "test": "jest"
