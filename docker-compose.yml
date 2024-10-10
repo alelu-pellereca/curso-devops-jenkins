@@ -7,7 +7,7 @@ services:
    ports:
     - "3000:3000"
   mail-service: 
-   build: ./userService
+   build: ./mailService
    volumes: 
     - .:/opt
    ports:
