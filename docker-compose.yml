@@ -1,8 +1,14 @@
 #version: '3'
 services: 
-  volumes-service: 
-   build: .
+  user-service: 
+   build: ./userService
    volumes: 
     - .:/opt
    ports:
     - "3000:3000"
+  mail-service: 
+   build: ./userService
+   volumes: 
+    - .:/opt
+   ports:
+    - "8080:3000"
